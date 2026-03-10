@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -38,13 +39,15 @@ color:white;
 position:absolute;
 width:200%;
 height:200%;
-background:
-radial-gradient(white 1px, transparent 1px);
+
+background:radial-gradient(white 1px, transparent 1px);
 background-size:50px 50px;
 
 animation:galaxyMove 120s linear infinite;
 
-opacity:0.4;
+opacity:0.35;
+
+z-index:0;
 
 }
 
@@ -70,6 +73,8 @@ border-radius:50%;
 
 animation:twinkle 2s infinite alternate;
 
+z-index:1;
+
 }
 
 @keyframes twinkle{
@@ -86,12 +91,21 @@ to{opacity:1}
 width:90%;
 max-width:750px;
 
-margin-bottom:40px;
+margin-bottom:45px;
 
 z-index:2;
 
 opacity:0;
+
 animation:fadeIn 2s forwards;
+
+transition:transform .6s;
+
+}
+
+.cover:hover{
+
+transform:scale(1.05);
 
 }
 
@@ -137,7 +151,7 @@ z-index:2;
 
 .open-btn:hover{
 
-transform:scale(1.1);
+transform:scale(1.12);
 
 }
 
@@ -178,6 +192,8 @@ border-radius:50%;
 
 animation:spark 1s forwards;
 
+z-index:3;
+
 }
 
 @keyframes spark{
@@ -201,7 +217,7 @@ opacity:0;
 
 <div class="galaxy"></div>
 
-<img src="cover.gif" class="cover">
+<img src="Cover.gif" class="cover">
 
 <button class="open-btn" onclick="openCard()">OPEN</button>
 
